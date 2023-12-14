@@ -12,12 +12,12 @@ for folder, subfolders, files in os.walk(root_path):
         if filename.endswith(".py"):
             file_path = os.path.join(folder, filename)
             files_list.append(filename)
-            for file in files_list:
-                with open(file_path) as file:
-                    content = file.readlines()
-                    for string in content:
-                        if string.startswith('def test_'):
-                            tests_list.append(string)
+    for file in files_list:
+        with open(file_path) as file:
+            content = file.readlines()
+            for string in content:
+                if string.startswith('def test_'):
+                    tests_list.append(string)
 
 duplicates = list(set([x for x in tests_list if tests_list.count(x) > 1]))
 
