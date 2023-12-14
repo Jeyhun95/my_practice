@@ -1,4 +1,5 @@
-file = open(r'C:\Users\jeykh\OneDrive\Рабочий стол\test\my_file.txt', encoding='utf-8')
+
+file = open(r'/Users/seyfme/PycharmProjects/folder/1.py', encoding='utf-8')
 
 test = file.readlines()
 
