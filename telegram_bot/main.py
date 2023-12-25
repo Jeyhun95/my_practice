@@ -9,7 +9,7 @@ bot = telebot.TeleBot(token=BOT_TOKEN)
 
 
 @bot.message_handler(commands=['site', 'website'])
-def open_site(*args):
+def open_site(message):
     webbrowser.open(link)
 
 
